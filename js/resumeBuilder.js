@@ -3,7 +3,7 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 var bio = {
   "name" : "MichAel ZhAng",
-  "role" : "Web Developer and IT Enineer",
+  "role" : "Web Developer and IT Engineer",
   "biopic" : "images/fry.jpg",
   "contacts" : {
     "location" : "Ningbo China",
@@ -11,18 +11,26 @@ var bio = {
     "email" : "geek.michael@live.com",
     "github" : "geekmichael"
   },
-  "welcomeMessage": "A lengendary life!",
+  "welcomeMessage": "Visionary IT professional",
   "skills" : ["Web development", "Windows/Linux server administration", "General IT support", "IT Project Management"]
 };
 
 var education = {
   "schools":[
     {
+      "name": "Shaanxi Railway Institute",
+      "location": "Weinan, Shaanxi, China",
+      "degree": "Specialized high school",
+      "majors": ["Railway Engineering"],
+      "dates": "1997-2001",
+      "url": "http://www.sxri.net"
+    },
+    {
       "name": "Xi'an Jiaotong University",
       "location": "Xi'an, Shaanxi, China",
       "degree": "BA",
       "majors": ["Computer Science"],
-      "dates": "2010",
+      "dates": "2006-2009",
       "url": "http://www.xjtu.edu.cn"
     },
     {
@@ -30,14 +38,14 @@ var education = {
       "location": "Hangzhou, Zhejiang, China",
       "degree": "MA",
       "majors": ["Project Management"],
-      "dates": "2017",
+      "dates": "In progress",
       "url": "http://www.zjut.edu.cn"
     }
   ],
   "onlineCourses": [
     {
       "title": "Frontend Nanodegree",
-      "school": "Udalocation",
+      "school": "Udacity",
       "dates": "2017",
       "url": "https://cn.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }
@@ -49,16 +57,23 @@ var work = {
     {
       "employer" : "University of Nottingham Ningbo China",
       "title" : "IT Support Assistant, System Development Team Manager",
-      "dates" : "2008.2 - 2013.11, 2014.4 - Present",
+      "dates" : "2008.2 - 2013.10, 2014.4 - Present",
       "location" : "Ningbo, China",
-      "description": "Three dates distinguished job performance contributed multifaceted responsibilities within management and senior technique role, tasked with providing critical direction and strategic leadership to support academic through Information Services. Managed projects and standing budgets, in addition evaluate project performance and recommends changes where performance is unsatisfactory. "
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    {
+      "employer" : "The Sino-British College, USST",
+      "title" : "IT Manager",
+      "dates" : "2013.11 - 2014.2",
+      "location" : "Ningbo, China",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "title" : "Network Engineer",
       "employer" : "China Railway Engineering Corporation",
       "dates" : "2001 - 2008.1",
       "location" : "Xi'an, China",
-      "description": "Performed multiple job roles in General Manager Office, and was responsible for technical support to end users, development of website and business systems, as well as conducting the enterprise network at both headquarter and branch. "
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
   ]
 };
@@ -68,16 +83,16 @@ var projects = {
     {
       "title" : "Absolute",
       "url" : "http://www.udacity.com",
-      "dates" : 2006,
+      "dates" : "2015",
       "images": ['', ''],
-      "description" : "Responsible for the development of company website by using PHP, HTML, CSS and MySQL, as well as the installation and configuration for web server"
+      "description" : "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
     },
     {
       "title" : "Awesome Project",
       "url" : "http://www.udacity.com",
-      "dates" : 2009,
+      "dates" : "2016",
       "images": [ ''],
-      "description" : "Responsible for re-structuring the exisiting active directory for a better performance and management productivity"
+      "description" : "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
     }
   ]
 };
@@ -145,26 +160,22 @@ bio.display = function() {
 }
 
 work.display = function() {
-  for (job in work.jobs) {
+  work.jobs.forEach(function(job) {
     $("#workExperience").append(HTMLworkStart);
 
-    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-
-    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-
-    var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-
-    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+    var formattedDates = HTMLworkDates.replace("%data%", job.dates);
+    var formattedLocation = HTMLworkLocation.replace("%data%", job.location);
+    var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
 
     $(".work-entry:last").append(formattedEmployer);
     $(".work-entry:last").append(formattedTitle);
     $(".work-entry:last").append(formattedDates);
     $(".work-entry:last").append(formattedLocation);
     $(".work-entry:last").append(formattedDescription);
-  }
-}
+  })
+};
 
 projects.display = function() {
   projects.projects.forEach(function(project) {
@@ -190,18 +201,34 @@ projects.display = function() {
 };
 
 education.display = function() {
-  for (school in education.schools) {
+
+  education.schools.forEach(function(school) {
+    var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+    formattedSchoolName = formattedSchoolName.replace("#", school.url);
+    var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
+    var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
+    var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
+    var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
+
     $("#education").append(HTMLschoolStart);
-
-    var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-    var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-    var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-    var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
-    var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-
     $(".education-entry:last").append(formattedSchoolName + formattedDegree, formattedDates, formattedLocation, formattedMajor);
-  }
-}
+  });
+
+  education.onlineCourses.forEach(function(onlineCourse) {
+    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", onlineCourse.title);
+    formattedOnlineTitle = formattedOnlineTitle.replace("#", onlineCourse.url);
+
+    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineCourse.school);
+    var formattedDates = HTMLonlineDates.replace("%data%", onlineCourse.dates);
+    var formattedOnlineURL = HTMLonlineURL.replace("%data%", onlineCourse.url);
+    formattedOnlineURL = formattedOnlineURL.replace("#", onlineCourse.url)
+
+    $("#education").append(HTMLonlineClasses);
+    $("#education").append(HTMLschoolStart);
+    $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool, formattedDates, formattedOnlineURL);
+
+  })
+};
 
 bio.display();
 work.display();
