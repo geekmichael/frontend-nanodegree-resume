@@ -1,11 +1,10 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-
 var bio = {
   "name" : "MichAel ZhAng",
   "role" : "Web Developer and IT Enineer",
-  "image" : "images/fry.jpg",
+  "biopic" : "images/fry.jpg",
   "contacts" : {
     "location" : "Ningbo China",
     "mobile" : "+86 18967880045",
@@ -13,45 +12,7 @@ var bio = {
     "github" : "geekmichael"
   },
   "welcomeMessage": "A lengendary life!",
-  "skills" : ["Web development", "Linux server administration", "General IT support", "Project Management"]
-};
-
-var work = {
- "jobs": [
-    {
-      "position" : "System Development Team Manager",
-      "employer" : "University of Nottingham Ningbo China",
-      "years" : "2008.2 - present",
-      "location" : "Ningbo, China",
-      "description": "Three years distinguished job performance contributed multifaceted responsibilities within management and senior technique role, tasked with providing critical direction and strategic leadership to support academic through Information Services. Managed projects and standing budgets, in addition evaluate project performance and recommends changes where performance is unsatisfactory. "
-    },
-    {
-      "position" : "Network Engineer",
-      "employer" : "China Railway Engineering Corporation",
-      "years" : "2001 - 2008.1",
-      "location" : "Xi'an, China",
-      "description": "Performed multiple job roles in General Manager Office, and was being responsible for evaluation, designation, implementation and support on end user computers, websites, business management systems, enterprise network at both headquarter and branch. "
-    }
-  ]
-};
-
-var projects = {
-  "projects": [
-    {
-      "name" : "CRFEB4 website",
-      "url" : "http://www.crfeb4.com",
-      "date" : 2006,
-      "image": "",
-      "description" : "Responsible for the development of company website by using PHP, HTML, CSS and MySQL, as well as the installation and configuration for web server"
-    },
-    {
-      "name" : "Re-structuring Active Directory",
-      "url" : "http://www.nottingham.edu.cn",
-      "date" : 2009,
-      "image": "",
-      "description" : "Responsible for re-structuring the exisiting active directory for a better performance and management productivity"
-    }
-  ]
+  "skills" : ["Web development", "Windows/Linux server administration", "General IT support", "IT Project Management"]
 };
 
 var education = {
@@ -60,7 +21,7 @@ var education = {
       "name": "Xi'an Jiaotong University",
       "location": "Xi'an, Shaanxi, China",
       "degree": "BA",
-      "major": ["Computer Science"],
+      "majors": ["Computer Science"],
       "dates": "2010",
       "url": "http://www.xjtu.edu.cn"
     },
@@ -68,7 +29,7 @@ var education = {
       "name": "Zhejiang University of Technology",
       "location": "Hangzhou, Zhejiang, China",
       "degree": "MA",
-      "major": ["Project Management"],
+      "majors": ["Project Management"],
       "dates": "2017",
       "url": "http://www.zjut.edu.cn"
     }
@@ -83,13 +44,54 @@ var education = {
   ]
 };
 
+var work = {
+ "jobs": [
+    {
+      "employer" : "University of Nottingham Ningbo China",
+      "title" : "IT Support Assistant, System Development Team Manager",
+      "dates" : "2008.2 - 2013.11, 2014.4 - Present",
+      "location" : "Ningbo, China",
+      "description": "Three dates distinguished job performance contributed multifaceted responsibilities within management and senior technique role, tasked with providing critical direction and strategic leadership to support academic through Information Services. Managed projects and standing budgets, in addition evaluate project performance and recommends changes where performance is unsatisfactory. "
+    },
+    {
+      "title" : "Network Engineer",
+      "employer" : "China Railway Engineering Corporation",
+      "dates" : "2001 - 2008.1",
+      "location" : "Xi'an, China",
+      "description": "Performed multiple job roles in General Manager Office, and was responsible for technical support to end users, development of website and business systems, as well as conducting the enterprise network at both headquarter and branch. "
+    }
+  ]
+};
+
+var projects = {
+  "projects": [
+    {
+      "title" : "Absolute",
+      "url" : "http://www.udacity.com",
+      "dates" : 2006,
+      "images": ['', ''],
+      "description" : "Responsible for the development of company website by using PHP, HTML, CSS and MySQL, as well as the installation and configuration for web server"
+    },
+    {
+      "title" : "Awesome Project",
+      "url" : "http://www.udacity.com",
+      "dates" : 2009,
+      "images": [ ''],
+      "description" : "Responsible for re-structuring the exisiting active directory for a better performance and management productivity"
+    }
+  ]
+};
+
+
 function inName(fullname){
   var nameArray = fullname.trim().split(" ");
 
+  nameArray[0] = nameArray[0].toLowerCase();
   nameArray[1] = nameArray[1].toUpperCase();
-  nameArray[0] = nameArray[0].slice(0,1).toUpperCase() + nameArray[0].slice(1).toLowerCase();
 
-  return nameArray[0]+" "+nameArray[1];
+  nameArray[0] = nameArray[0].slice(0,1).toUpperCase().concat(nameArray[0].slice(1));
+
+  return nameArray[0].concat(' ', nameArray[1]);
   //var firstName = nameArray[0];
   //var firstLetter = firstName.slice(0,1);
   //firstLetter = firstLetter.toUpperCase();
@@ -102,11 +104,21 @@ function inName(fullname){
   // return newFullname;
 };
 
+function placeholderImage(title, width, height, txtsize){
+
+  var placeholderIMG = 'https://placeholdit.imgix.net/~text?txtsize=';
+  txtsize = typeof txtsize !== 'undefined' ? txtsize : 33;
+  width = typeof width !== 'undefined' ? width : 350;
+  height = typeof height !== 'undefined' ? height : 200;
+
+  return placeholderIMG.concat(txtsize, '&txt=', title, '&w=', width, '&h=', height);
+}
+
 bio.display = function() {
 
-  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedName = HTMLheaderName.replace("%data%", inName(bio.name));
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-  var formattedImage = HTMLbioPic.replace("%data%", bio.image);
+  var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
 
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -114,7 +126,7 @@ bio.display = function() {
   var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 
   $("#header").prepend(formattedName, formattedRole);
-  $("#header").append(formattedImage);
+  $("#header").append(formattedBiopic);
 
   $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub);
   $("#footerContacts").append(formattedMobile, formattedEmail, formattedGithub);
@@ -138,9 +150,9 @@ work.display = function() {
 
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 
-    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].years);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 
     var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 
@@ -154,6 +166,29 @@ work.display = function() {
   }
 }
 
+projects.display = function() {
+  projects.projects.forEach(function(project) {
+    $("#projects").append(HTMLprojectStart);
+
+    var formattedProjectTitle = HTMLworkTitle.replace("%data%", project.title);
+
+    var formattedProjectDates = HTMLprojectDates.replace("%data%", project.dates);
+
+    var formattedProjectDescription = HTMLprojectDescription.replace("%data%", project.description);
+
+    $(".project-entry:last").append(formattedProjectTitle);
+    $(".project-entry:last").append(formattedProjectDates);
+    $(".project-entry:last").append(formattedProjectDescription);
+
+    project.images.forEach(function(image){
+      image = image ? image : placeholderImage(project.title);
+      var formattedProjectImage = HTMLprojectImage.replace("%data%", image);
+      $(".project-entry:last").append(formattedProjectImage);
+      console.log(image);
+    });
+  })
+};
+
 education.display = function() {
   for (school in education.schools) {
     $("#education").append(HTMLschoolStart);
@@ -161,34 +196,12 @@ education.display = function() {
     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
     var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
     var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-    var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+    var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
     var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 
     $(".education-entry:last").append(formattedSchoolName + formattedDegree, formattedDates, formattedLocation, formattedMajor);
   }
 }
-
-projects.display = function() {
-  for (project in projects.projects) {
-    $("#projects").append(HTMLprojectStart);
-
-    var formattedProjectTitle = HTMLworkTitle.replace("%data%", projects.projects[project].name);
-
-    var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].date);
-
-    var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-
-    var imageURL = projects.projects[project].image;
-    if (imageURL) {
-      var formattedProjectImage = HTMLprojectImage.replace("%data%", imageURL);
-      $(".project-entry:last").append(formattedProjectImage);
-    }
-
-    $(".project-entry:last").append(formattedProjectTitle);
-    $(".project-entry:last").append(formattedProjectDates);
-    $(".project-entry:last").append(formattedProjectDescription);
-  }
-};
 
 bio.display();
 work.display();
@@ -196,5 +209,4 @@ projects.display();
 education.display();
 
 $("#main").append(internationalizeButton);
-
 $("#mapDiv").append(googleMap);
