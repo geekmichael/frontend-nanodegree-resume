@@ -37,7 +37,7 @@ var HTMLskills = '<li class="flex-item label label-primary">%data%</li>';
 
 var HTMLworkStart = '<article class="work-entry row"></article>';
 var HTMLworkDatesLocation = '<div class="col-md-3 col-sm-3 work-date-location">%dates%<br>%location%</div>';
-var HTMLworkPosition = '<div class="col-md-9 col-sm-3 work-info"><h3>%title%</h3><p><a href="#">%employer%</a></p><p>%description%</p></div>';
+var HTMLworkPosition = '<div class="col-md-9 col-sm-3 work-info"><h3 class="section-title-sm">%title%</h3><p><a href="#">%employer%</a></p><p>%description%</p></div>';
 
 var HTMLprojectStart = '<article class="project-entry col-md-6"></article>';
 var HTMLprojectImageContainer = '<div class="col-md-4 col-sm-4 project-image-container text-center"></div>';
@@ -48,7 +48,7 @@ var HTMLschoolStart = '<article class="education-entry"></article>';
 var HTMLschoolInfo = '<div class="row school-info"><div class="col-md-2 school-dates">%dates%</div><div class="col-md-2 col-sm-2 school-degree">%degree%</div><div class="col-md-3 col-sm-3 school-major">%majors%</div><div class="col-md-3 col-sm-3 school-name"><a href="%url%" target="_blank">%name%</a></div><div class="col-md-2 col-sm-2 school-location">%location%</div></div>';
 
 var HTMLtrainingStart = '<article class="training-entry"></article>';
-var HTMLtrainingHeader = '<header class="section-header training-header"><h3>Training Courses</h3></header>';
+var HTMLtrainingHeader = '<header class="section-header training-header"><h3 class="section-title-sm">Training Courses</h3></header>';
 
 var HTMLtrainingInfo = '<div class="row training-info"><div class="col-md-2 col-sm-2 training-dates">%dates%</div><div class="col-md-2 col-sm-2 training-cert">%cert%</div><div class="col-md-3 col-sm-3 training-title">%title%</div><div class="col-md-5 col-sm-5 training-institute"><a href="%url%" target="_blank">%institute%</a></div></div>';
 
