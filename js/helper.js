@@ -33,7 +33,7 @@ var HTMLskills = "<li class=\"flex-item label label-primary\">%data%</li>";
 
 var HTMLworkStart = "<article class=\"work-entry row\"></article>";
 var HTMLworkDatesLocation = "<div class=\"col-md-3 col-sm-3 work-date-location\">%dates%<br>%location%</div>";
-var HTMLworkPosition = "<div class=\"col-md-9 col-sm-3 work-info\"><h3 class=\"section-title-sm\">%title%</h3><p><a href=\"#\">%employer%</a></p><p>%description%</p></div>";
+var HTMLworkPosition = "<div class=\"col-md-9 col-sm-9 work-info\"><h3 class=\"section-title-sm\">%title%</h3><p><a href=\"#\">%employer%</a></p><p>%description%</p></div>";
 
 var HTMLprojectStart = "<article class=\"project-entry col-md-6\"></article>";
 var HTMLprojectImageContainer = "<div class=\"col-md-4 col-sm-4 project-image-container text-center\"></div>";
