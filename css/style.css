@@ -1,135 +1,90 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #666;
+  color: #888;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+a, a:focus, a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #f00;
+}
+
+h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-.clear-fix {
-  overflow: auto;
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
-
-h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #333;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  line-height: 1.05em;
+  font-weight: 300;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 1.45em;
+  color: #888;
 }
 
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+.reset-border {
+  border: 0 !important;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  padding: 10px 5%;
+/*
 
+--------------------------- */
+#main {
+  background-color: #fff;
+  padding: 40px 20px;
 }
 
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+#welcomeMessage, #skills, #workExperience, #projects, #education, #mapDiv {
+  margin: 10px 0;
+  border-top: 1px dotted #ddd;
+  padding-top: 10px;
 }
 
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
+h1#name span{
+  font-size: 16px;
+  font-weight: 300;
 }
 
-p {
-  font-size: 14px;
+#bioTitle {
   color: #333;
-  line-height: 21px;
 }
 
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+.biopic {
+  width: 170px;
+  margin-right: 20px;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+.contact-text {
+  margin-left: 10px;
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
+.welcome-container {
   background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear: both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+  padding: 20px;
 }
 
 .flex-box {
@@ -137,74 +92,18 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
   padding: 10px;
+  list-style: none;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
-img {
-  padding: 10px;
-}
-
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+.flex-item {
+  margin: 10px;
+  font-weight: 100 !important;
 }
 
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
 }
 
 #mapDiv {
@@ -213,9 +112,111 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h2 i.fa {
+  color: #aaa;
+  font-size: 1.2em;
+  vertical-align: -10%;
+  margin-right: 15px;
+}
+
+.work-entry, .education-entry, .training-entry {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+}
+.work-date-location {
+  vertical-align: top;
+  margin-bottom: 0;
+}
+
+.project-container {
+  background-color: #efefef;
+  padding: 20px 0;
+}
+
+.project-image {
+  margin: 5px;
+  width: 120px;
+}
+
+.project-description {
+  text-align: justify;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+footer{
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.primary-contacts i {
+  font-size: 2em;
+}
+
+#footerContacts {
+  margin: 20px 0;
+}
+
+#footerContacts li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#footerContacts li a:hover{
+  background: #3b5998;
+  opacity: 0.8;
+  color: #fff;
+  border: 0;
+}
+
+#footerContacts li a{
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 4px;
+  margin: 20px 0 10px 0;
+  display: block;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width:900px) {
+
+}
+
+@media only screen and (max-width: 750px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .flex-item {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   .biopic {
-    display: block;
+    width: 120px;
+  }
+}
+
+@media on screen and (max-width: 380px) {
+  #main {
+    padding: 0;
+  }
+  h1#name {
+    font-size: 1.8em;
+  }
+  .biopic {
+    display: none;
   }
 }
