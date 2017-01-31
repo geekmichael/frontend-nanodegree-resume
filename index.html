@@ -22,57 +22,57 @@
 
 <body>
 
-<main id="main" class="container">
+<main id="main" class="main-container container">
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
+    display by looking at the id or at what's written between the <h2 class="section-title"> tags.
     -->
     <header id="header" class="row">
-      <div class="col-md-4" id="bioTitle">
+      <div class="col-md-4" id="bioTitle" class="name-role">
       </div>
       <div class="col-md-8">
         <ul id="topContacts" class="flex-box pull-right"></ul>
       </div>
     </header>
 
-    <section id="welcomeMessage" class="row">
+    <section id="welcomeMessage" class="section-container row">
       <article class="welcome-container">
         <picture id="bioPicContainer" class="pull-left">
         </picture>
       </article>
     </section>
 
-    <section id="skills" class="row">
+    <section id="skills" class="section-container row">
       <header class="section-header skills-header">
-        <h2><i class="fa fa-magic" aria-hidden="true"></i> Skills at a Glance</h2>
+        <h2 class="section-title"><i class="fa fa-magic" aria-hidden="true"></i> Skills at a Glance</h2>
       </header>
     </section>
 
-    <section id="workExperience" class="row">
+    <section id="workExperience" class="section-container row">
       <header class="section-header work-header">
-        <h2><i class="fa fa-briefcase" aria-hidden="true"></i> Work Experience</h2>
+        <h2 class="section-title"><i class="fa fa-briefcase" aria-hidden="true"></i> Work Experience</h2>
       </header>
     </section>
 
-    <section id="projects" class="row">
+    <section id="projects" class="section-container row">
       <header class="section-header project-header">
-        <h2><i class="fa fa-flag-o" aria-hidden="true"></i> Projects</h2>
+        <h2 class="section-title"><i class="fa fa-flag-o" aria-hidden="true"></i> Projects</h2>
       </header>
       <div class="container projects-container">
       </div>
     </section>
 
-    <section id="education" class="row">
+    <section id="education" class="section-container row">
       <header class="section-header education-header">
-        <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</h2>
+        <h2 class="section-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</h2>
       </header>
     </section>
 
-    <section id="mapDiv" class="row">
+    <section id="mapDiv" class="map-container row">
       <header class="section-header map-header">
-        <h2><i class="fa fa-map-o" aria-hidden="true"></i> Where I've Lived and Worked</h2>
+        <h2 class="section-title"><i class="fa fa-map-o" aria-hidden="true"></i> Where I've Lived and Worked</h2>
       </header>
     </section>
 
@@ -83,7 +83,7 @@
         </div>
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <ul id="footerContacts"></ul>
+            <ul id="footerContacts" class="footer-social"></ul>
           </div>
         </div>
       </div>

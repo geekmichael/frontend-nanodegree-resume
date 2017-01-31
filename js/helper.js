@@ -12,8 +12,8 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span>';
+var HTMLheaderName = '<h1 id="name" class="fullname">%data%</h1>';
+var HTMLheaderRole = '<span class="role">%data%</span>';
 
 //var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><a href="mailto: %data%"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="contact-text">%data%</span></a></li>';
@@ -42,7 +42,7 @@ var HTMLworkPosition = '<div class="col-md-9 col-sm-3 work-info"><h3>%title%</h3
 var HTMLprojectStart = '<article class="project-entry col-md-6"></article>';
 var HTMLprojectImageContainer = '<div class="col-md-4 col-sm-4 project-image-container text-center"></div>';
 var HTMLprojectImage = '<img src="%data%" class="project-image img-rounded">';
-var HTMLprojectInfo = '<div class="col-md-8 col-sm-8 project-info"><h3>%dates%, %title%</h3><p class="project-description">%description%</p></div>';
+var HTMLprojectInfo = '<div class="col-md-8 col-sm-8 project-info"><h3 class="section-title-sm">%dates%, %title%</h3><p class="project-description">%description%</p></div>';
 
 var HTMLschoolStart = '<article class="education-entry"></article>';
 var HTMLschoolInfo = '<div class="row school-info"><div class="col-md-2 school-dates">%dates%</div><div class="col-md-2 col-sm-2 school-degree">%degree%</div><div class="col-md-3 col-sm-3 school-major">%majors%</div><div class="col-md-3 col-sm-3 school-name"><a href="%url%" target="_blank">%name%</a></div><div class="col-md-2 col-sm-2 school-location">%location%</div></div>';
@@ -53,7 +53,7 @@ var HTMLtrainingHeader = '<header class="section-header training-header"><h3>Tra
 var HTMLtrainingInfo = '<div class="row training-info"><div class="col-md-2 col-sm-2 training-dates">%dates%</div><div class="col-md-2 col-sm-2 training-cert">%cert%</div><div class="col-md-3 col-sm-3 training-title">%title%</div><div class="col-md-5 col-sm-5 training-institute"><a href="%url%" target="_blank">%institute%</a></div></div>';
 
 //var internationalizeButton = '<button>Internationalize</button>';
-var googleMap = '<div id="map"></div>';
+var googleMap = '<div id="map" class="map-row"></div>';
 
 
 /*

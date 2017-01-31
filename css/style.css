@@ -32,14 +32,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-h2 {
+.section-title {
   font-size: 1.3em;
   text-transform: uppercase;
   line-height: 1.05em;
   font-weight: 300;
 }
 
-h3 {
+.section-title-sm {
   font-size: 1em;
   font-weight: 100;
   line-height: 1.45em;
@@ -47,29 +47,26 @@ h3 {
 }
 
 .reset-border {
-  border: 0 !important;
+  border: 0;
 }
 
-/*
-
---------------------------- */
-#main {
+.main-container {
   background-color: #fff;
   padding: 40px 20px;
 }
 
-#welcomeMessage, #skills, #workExperience, #projects, #education, #mapDiv {
+.section-container {
   margin: 10px 0;
   border-top: 1px dotted #ddd;
   padding-top: 10px;
 }
 
-h1#name span{
+.role{
   font-size: 16px;
   font-weight: 300;
 }
 
-#bioTitle {
+.name-role {
   color: #333;
 }
 
@@ -98,25 +95,27 @@ h1#name span{
 
 .flex-item {
   margin: 10px;
-  font-weight: 100 !important;
+  font-weight: 100;
 }
 
-#map {
+.map-row {
   display: block;
   height: 100%;
 }
 
-#mapDiv {
+.map-container {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  margin: 10px 0;
+  border-top: 1px dotted #ddd;
+  padding: 10px 0;
 }
 
 .section-header {
   margin-bottom: 20px;
 }
 
-.section-header h2 i.fa {
+.section-header .fa {
   color: #aaa;
   font-size: 1.2em;
   vertical-align: -10%;
@@ -158,23 +157,23 @@ footer{
   font-size: 2em;
 }
 
-#footerContacts {
+.footer-social {
   margin: 20px 0;
 }
 
-#footerContacts li {
+.footer-social li {
   display: inline-block;
   margin: 0 10px;
 }
 
-#footerContacts li a:hover{
+.footer-social li a:hover{
   background: #3b5998;
   opacity: 0.8;
   color: #fff;
   border: 0;
 }
 
-#footerContacts li a{
+.footer-social li a{
   padding: 20px;
   font-size: 1.5em;
   border-radius: 4px;
@@ -209,11 +208,11 @@ footer{
   }
 }
 
-@media on screen and (max-width: 380px) {
-  #main {
+@media only screen and (max-width: 380px) {
+  .main-container {
     padding: 0;
   }
-  h1#name {
+  .fullname {
     font-size: 1.8em;
   }
   .biopic {
