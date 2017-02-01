@@ -144,7 +144,7 @@ bio.display = function () {
 work.display = function () {
     "use strict";
     work.jobs.forEach(function (job) {
-        $("#workExperience").append(HTMLworkStart);
+        $(".work-container").append(HTMLworkStart);
         var formattedDatesLocation = HTMLworkDatesLocation.replace("%dates%", job.dates);
         formattedDatesLocation = formattedDatesLocation.replace("%location%", job.location);
         var formattedPosition = HTMLworkPosition.replace("%description%", job.description);
