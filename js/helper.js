@@ -1,13 +1,5 @@
-/*jslint
-    es6, node
-*/
-/*property
-    InfoWindow, LatLng, LatLngBounds, Map, Marker, OK, PlacesService,
-    PlacesServiceStatus, addEventListener, addListener, contacts, content,
-    disableDefaultUI, event, extend, fitBounds, forEach, formatted_address,
-    geometry, getCenter, jobs, lat, lng, location, map, mapBounds, maps,
-    places, position, push, query, querySelector, schools, setCenter,
-    textSearch, title
+/*global
+document, window, google, bio, education, work, project, mapBounds, e
 */
 var HTMLheaderName = "<h1 id=\"name\" class=\"fullname\">%data%</h1>";
 var HTMLheaderRole = "<span class=\"role\">%data%</span>";
@@ -100,7 +92,7 @@ Start here! initializeMap() is called when page is loaded.
 function initializeMap() {
 
     "use strict";
-    var locations;
+    var locations = [];
 
     var mapOptions = {
         disableDefaultUI: true
@@ -118,9 +110,6 @@ function initializeMap() {
     written for bio, education, and work.
     */
     function locationFinder() {
-
-        // initializes an empty array
-        var locations = [];
 
         // adds the single location property from bio to the locations array
         locations.push(bio.contacts.location);
@@ -173,7 +162,7 @@ function initializeMap() {
 
         // hmmmm, I wonder what this is about...
         google.maps.event.addListener(marker, "click", function () {
-            // your code goes here!
+            infoWindow.open(marker.get("map"), marker);
         });
 
         // this is where the pin actually gets added to the map.
@@ -239,7 +228,8 @@ window.addEventListener("load", initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-window.addEventListener("resize", function (e) {
+window.addEventListener("resize", function () {
+    "use strict";
     //Make sure the map bounds get updated on page resize
     map.fitBounds(mapBounds);
 });
